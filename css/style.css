@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+}
+
+.clear{
+    clear:both;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    max-height: 700px;
+    background-color: rgb(0, 0, 0);
+    margin: 0 auto;
+}
+
+.slider p{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0px;
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0,0.75);
+    width: 100%;
+}
+
+.slider img{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+header{
+    position: fixed;
+    background-color:rgb(0, 0, 0);
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+}
+
+/*STYLING HEADER FOR DESKTOP*/
+
+header nav.pc{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header nav.pc ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header nav.pc ul li{
+    line-height: 60px;
+    margin: 0 10px;
+}
+
+header nav.pc ul li a{
+    background-color:rgb(0, 0, 0);
+    color: chartreuse;
+    padding: 10px 5px;
+    text-decoration: none;
+}
+
+header nav.pc ul li:first-child a{
+    border-bottom: 2px solid white;
+}
+
+/*STYLING HEADER FOR MOBILE*/
+
+header nav.mobile{
+    display:none;
+    background-color: green;
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+header nav.mobile ul{
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+header nav.mobile:hover ul{
+    display: block;
+}
+
+header nav.mobile ul li{
+    line-height: 60px;
+}
+
+header nav.mobile ul li a{
+    background-color:rgb(0, 0, 0);
+    color: chartreuse;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav.mobile ul li:first-child a{
+    border-bottom: 2px solid white;
+}
+
+section.florest p{
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+section.florest h1{
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+section.florest .container{
+    background-color: white;
+    padding: 20px 2%;
+}
+
+.types img{
+    width: 80%;
+}
+
+.top{
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background-color: blue;
+    border-radius: 32px;
+    right: 30px;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+/*MEDIAS QUERIES*/
+@media screen and (max-width: 850px){
+    header nav.pc{
+        display: none;
+    }
+
+    header nav.mobile{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .slider{
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 80%;
+        max-height: 400px;
+        background-color: rgb(0, 0, 0);
+        margin: 0 auto;
+    }
+}
