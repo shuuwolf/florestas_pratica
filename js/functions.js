@@ -37,5 +37,14 @@ $(function(){
             }
         });
     })
+
+    $('.ss4f212').on('click', function(event){
+        event.preventDefault();
+
+        var section = $(this).attr('href');
+        var top = $(section).offset().top - 70;
+
+        $('html').scrollTop(top);
+    });
     
 });
